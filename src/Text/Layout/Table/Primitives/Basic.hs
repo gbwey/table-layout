@@ -50,7 +50,7 @@ data CutMark
 
 -- | A single ellipsis unicode character is used to show cut marks.
 instance Default CutMark where
-    def = singleCutMark "…"
+    def = singleCutMark "^"
 
 -- | Specify two different cut marks, one for cuts on the left and one for cuts
 -- on the right.

@@ -1,7 +1,7 @@
 module Text.Layout.Table.Internal where
 
 import Data.Default.Class
-import Data.Default.Instances.Base
+--import Data.Default.Instances.Base
 
 import Text.Layout.Table.Position
 import Text.Layout.Table.Primitives.Basic

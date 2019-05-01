@@ -6,15 +6,14 @@ name:                table-layout
 -- PVP summary:      +-+------- breaking API changes
 --                   | | +----- non-breaking API additions
 --                   | | | +--- code changes with no API change
-version:             0.8.0.4
+version:             0.9.0.0
 
 synopsis:            Layout text as grid or table.
 
 description:         
-    `table-layout` is a library for text-based table layout. It provides several
-    functions and types which help in this task from the ground up. Although,
-    using all of them is not necessary. It provides the following layout
-    features:
+    `table-layout` is a library for text-based table layout, it provides several
+    functions and types which help in this task from the ground up, although
+    using them is not necessary. It provides the following layout features:
     .
     * Fixed-size and arbitrarily sized columns and limiting versions of those
     .
@@ -26,7 +25,7 @@ description:
     .
     * Fancy tables with optional headers and user styles
     .
-    * Justified text and vertically aligned column layout over multiple rows
+    * Justified text layout over multiple rows
     .
     A small tutorial is provided in the `README.md` file.
 
@@ -70,69 +69,15 @@ library
 
   
   -- LANGUAGE extensions used by modules in this package.
-  other-extensions:    RecordWildCards,
-                       EmptyDataDecls,
-                       FlexibleInstances,
-                       PatternSynonyms,
-                       MultiWayIf
+  other-extensions:    RecordWildCards
   
   -- Other library packages from which modules are imported.
-  build-depends:       base >=4.8 && <4.13,
-                       data-default-class >=0.1.1 && < 0.2,
-                       data-default-instances-base ==0.1.*
+  build-depends:       base >=4.8 
+                       ,data-default-class
+                       
 
   hs-source-dirs:      src
   
   -- Base language which the package is written in.
   default-language:    Haskell2010
 
-executable table-layout-test-styles
-  main-is:             Test.hs
-  build-depends:       base >=4.8 && <4.13,
-                       data-default-class >=0.1.1 && < 0.2,
-                       data-default-instances-base ==0.1.*
-  hs-source-dirs:      src
-  other-modules:       Text.Layout.Table,
-                       Text.Layout.Table.Internal,
-                       Text.Layout.Table.Justify,
-                       Text.Layout.Table.Position,
-                       Text.Layout.Table.Position.Internal,
-                       Text.Layout.Table.Primitives.AlignSpec,
-                       Text.Layout.Table.Primitives.AlignSpec.Internal,
-                       Text.Layout.Table.Primitives.Basic,
-                       Text.Layout.Table.Primitives.Column,
-                       Text.Layout.Table.Primitives.LenSpec,
-                       Text.Layout.Table.Primitives.LenSpec.Internal,
-                       Text.Layout.Table.Primitives.Occurence,
-                       Text.Layout.Table.Style Text.Layout.Table.Vertical
-
-  default-language:    Haskell2010
-
-test-suite table-layout-tests
-  type:                exitcode-stdio-1.0
-  hs-source-dirs:      test-suite, src
-  main-is:             Spec.hs
-  build-depends:       base >=4.8 && <4.13,
-                       QuickCheck >=2.8 && < 2.13,
-                       HUnit >=1.3,
-                       data-default-class >=0.1.1 && < 0.2,
-                       data-default-instances-base ==0.1.*,
-                       hspec
-
-  other-modules:       TestSpec,
-                       Text.Layout.Table,
-                       Text.Layout.Table.Internal,
-                       Text.Layout.Table.Justify,
-                       Text.Layout.Table.Position,
-                       Text.Layout.Table.Position.Internal,
-                       Text.Layout.Table.Primitives.AlignSpec,
-                       Text.Layout.Table.Primitives.AlignSpec.Internal,
-                       Text.Layout.Table.Primitives.Basic,
-                       Text.Layout.Table.Primitives.Column,
-                       Text.Layout.Table.Primitives.LenSpec,
-                       Text.Layout.Table.Primitives.LenSpec.Internal,
-                       Text.Layout.Table.Primitives.Occurence,
-                       Text.Layout.Table.Style,
-                       Text.Layout.Table.Vertical
-
-  default-language:    Haskell2010

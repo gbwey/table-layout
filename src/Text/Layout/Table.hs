@@ -119,7 +119,7 @@ import           Data.List
 import           Data.Maybe
 import           Data.Semigroup
 import           Data.Default.Class
-import           Data.Default.Instances.Base                          ()
+--import           Data.Default.Instances.Base                          ()
 
 import           Text.Layout.Table.Justify
 import           Text.Layout.Table.Style
