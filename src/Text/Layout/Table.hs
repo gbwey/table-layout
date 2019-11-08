@@ -555,7 +555,7 @@ tableLines specs TableStyle { .. } header rowGroups =
             , headerTopC
             , headerTopR
             )
-        NoHeader                      ->
+        NoHeader ->
             ( id
             , id
             , groupTopH
